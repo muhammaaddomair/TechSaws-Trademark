@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 215 41% 12%;
+    --muted: 210 30% 95%;
+    --muted-foreground: 215 16% 46%;
+    --border: 214 31% 88%;
+    --primary: 206 84% 47%;
+    --primary-foreground: 0 0% 100%;
+    --ring: 206 84% 47%;
+    --radius: 1rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body), sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .font-heading {
+    font-family: var(--font-heading), sans-serif;
+  }
+}
+
+@keyframes trademark-pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@layer utilities {
+  .animate-trademark-pop {
+    animation: trademark-pop 2.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+}
