@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Search } from "lucide-react";
 
-import heroImage from "@/assests/hero-img.jpg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -10,7 +9,7 @@ export function HeroSection() {
     <section className="relative isolate overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src={heroImage}
+          src="/assets/hero-img.jpg"
           alt="Trademark protection hero"
           fill
           priority

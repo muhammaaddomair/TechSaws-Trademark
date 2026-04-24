@@ -3,12 +3,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import canadaFlag from "@/assests/canada_round_icon_256.png";
-import euFlag from "@/assests/european_union_round_icon_256.png";
-import googleReviewIcon from "@/assests/google-customerreviewicon.png";
-import shopifyIcon from "@/assests/shoppify-icon.png";
-import ukFlag from "@/assests/united_kingdom_round_icon_256.png";
-import usaFlag from "@/assests/united_states_of_america_round_icon_256.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -22,22 +16,22 @@ const regions = [
   {
     name: "United States",
     count: "4 Million+ Trademarks",
-    flag: usaFlag,
+    flag: "/assets/united_states_of_america_round_icon_256.png",
   },
   {
     name: "Canada",
     count: "2 Million+ Trademarks",
-    flag: canadaFlag,
+    flag: "/assets/canada_round_icon_256.png",
   },
   {
     name: "European Union",
     count: "2 Million+ Trademarks",
-    flag: euFlag,
+    flag: "/assets/european_union_round_icon_256.png",
   },
   {
     name: "United Kingdom",
     count: "3 Million+ Trademarks",
-    flag: ukFlag,
+    flag: "/assets/united_kingdom_round_icon_256.png",
   },
 ];
 
@@ -98,13 +92,17 @@ export function SimilarMarksSection() {
               </p>
               <div className="mt-4 flex items-center gap-4">
                 <Image
-                  src={shopifyIcon}
+                  src="/assets/shoppify-icon.png"
                   alt="Shopper Approved"
+                  width={150}
+                  height={40}
                   className="h-auto w-[150px] object-contain"
                 />
                 <Image
-                  src={googleReviewIcon}
+                  src="/assets/google-customerreviewicon.png"
                   alt="Google Customer Reviews"
+                  width={92}
+                  height={32}
                   className="h-auto w-[92px] object-contain"
                 />
               </div>
@@ -137,6 +135,8 @@ export function SimilarMarksSection() {
                     <Image
                       src={region.flag}
                       alt={`${region.name} flag`}
+                      width={76}
+                      height={76}
                       className="h-[76px] w-[76px] rounded-full object-cover"
                     />
                   </div>

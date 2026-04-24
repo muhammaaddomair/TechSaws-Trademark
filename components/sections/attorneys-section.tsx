@@ -1,29 +1,24 @@
 import Image from "next/image";
 
-import attorneyOne from "@/assests/attorney-img1.png";
-import attorneyTwo from "@/assests/attorney-img2.png";
-import attorneyThree from "@/assests/attorney-img3.png";
-import lawIcon from "@/assests/law.png";
-import scaleIcon from "@/assests/pngwing.com.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 const attorneys = [
   {
     name: "Ksean Williams",
-    image: attorneyOne,
+    image: "/assets/attorney-img1.png",
     description:
       "Ksean is a seasoned intellectual property attorney who has represented a diverse range of clients, from small businesses to international corporations. His strategic approach ensures your trademark is secure and fully compliant.",
   },
   {
     name: "James Clarke",
-    image: attorneyTwo,
+    image: "/assets/attorney-img2.png",
     description:
       "James has extensive experience in trademark law and is committed to helping businesses protect their intellectual property, with over 7 years of legal experience.",
   },
   {
     name: "Sophia Green",
-    image: attorneyThree,
+    image: "/assets/attorney-img3.png",
     description:
       "With over 10 years of legal experience, Sophia specializes in helping startups secure their trademarks and grow their brand with confidence. She's known for her attention to detail and client-focused approach.",
   },
@@ -48,8 +43,10 @@ export function AttorneysSection() {
         <div className="mx-auto max-w-[1120px] text-center">
           <div className="flex items-center justify-center gap-10">
             <Image
-              src={lawIcon}
+              src="/assets/law.png"
               alt="Legal services icon"
+              width={54}
+              height={54}
               className="hidden h-[54px] w-[54px] object-contain opacity-45 lg:block"
             />
             <div className="max-w-[900px]">
@@ -66,8 +63,10 @@ export function AttorneysSection() {
               </p>
             </div>
             <Image
-              src={scaleIcon}
+              src="/assets/pngwing.com.png"
               alt="Law gavel icon"
+              width={52}
+              height={52}
               className="hidden h-[52px] w-[52px] object-contain opacity-45 lg:block"
             />
           </div>
@@ -84,6 +83,8 @@ export function AttorneysSection() {
                   <Image
                     src={attorney.image}
                     alt={attorney.name}
+                    width={308}
+                    height={258}
                     className="h-[258px] w-full object-cover"
                   />
                 </div>

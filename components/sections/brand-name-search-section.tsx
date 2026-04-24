@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Search } from "lucide-react";
 
-import brandNameImage from "@/assests/brand-name-img.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -37,8 +36,10 @@ export function BrandNameSearchSection() {
 
         <div className="flex justify-center lg:justify-end">
           <Image
-            src={brandNameImage}
+            src="/assets/brand-name-img.png"
             alt="Brand name availability search illustration"
+            width={420}
+            height={320}
             className="h-auto w-full max-w-[420px] object-contain"
           />
         </div>
