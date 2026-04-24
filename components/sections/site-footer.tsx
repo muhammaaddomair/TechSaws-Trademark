@@ -1,8 +1,19 @@
 import Link from "next/link";
 import { MapPinned, Phone, ScrollText } from "lucide-react";
 
-const quickLinksLeft = ["Home", "About Us", "Our Services", "Trademark Renewal"];
-const quickLinksRight = ["Contact Us", "FAQ", "Trademark Registration", "Trademark Revival"];
+const quickLinksLeft = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/#about-us" },
+  { label: "Our Services", href: "/trademark-registration" },
+  { label: "Trademark Renewal", href: "/trademark-renewal" },
+];
+
+const quickLinksRight = [
+  { label: "Contact Us", href: "/#contact-us" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Trademark Registration", href: "/trademark-registration" },
+  { label: "Trademark Revival", href: "/trademark-revival" },
+];
 
 export function SiteFooter() {
   return (
@@ -39,22 +50,22 @@ export function SiteFooter() {
                 <div className="grid gap-6">
                   {quickLinksLeft.map((item) => (
                     <Link
-                      key={item}
-                      href="#"
+                      key={item.label}
+                      href={item.href}
                       className="text-[16px] leading-7 text-white transition-opacity hover:opacity-80"
                     >
-                      {item}
+                      {item.label}
                     </Link>
                   ))}
                 </div>
                 <div className="grid gap-6">
                   {quickLinksRight.map((item) => (
                     <Link
-                      key={item}
-                      href="#"
+                      key={item.label}
+                      href={item.href}
                       className="text-[16px] leading-7 text-white transition-opacity hover:opacity-80"
                     >
-                      {item}
+                      {item.label}
                     </Link>
                   ))}
                 </div>
