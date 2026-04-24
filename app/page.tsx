@@ -6,6 +6,7 @@ import { RegisterStepsSection } from "@/components/sections/register-steps-secti
 import { SimilarMarksSection } from "@/components/sections/similar-marks-section";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteHeader } from "@/components/sections/site-header";
+import { TrademarkPackagesSection } from "@/components/sections/trademark-packages-section";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <RegisterStepsSection />
       <PricingPromoSection />
       <BrandNameSearchSection />
+      <TrademarkPackagesSection />
       <SiteFooter />
     </main>
   );
